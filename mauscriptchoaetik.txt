@@ -1,4 +1,4 @@
--- ✅ MẪU CHUẨN CHO NGƯỜI MỚI | TÉO HUB 🍎
+-- ✅ MẪU CHUẨN CHO NGƯỜI MỚI | ax10
 -- Giữ nguyên giao diện thật, chỉ thêm hướng dẫn 👈 ngay bên cạnh dòng cần sửa
 
 repeat task.wait() until game:IsLoaded()
@@ -17,10 +17,10 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0, 40, 0, 40)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=1000035944"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
+ImageButton.Image = "http://www.roblox.com/asset/?id=81010353399760"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
 
 UICorner.CornerRadius = UDim.new(1, 10)
-UICorner.ParTabsent = ImageButton
+UICorner.Parent = ImageButton
 
 ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
@@ -32,8 +32,8 @@ repeat wait() until game:IsLoaded()
 
 -- 🪟 Cửa sổ chính
 local Window = Fluent:CreateWindow({
-	Title = "ax10 =}",         -- 👈 đổi thành tên script của bạn
-	SubTitle = "script hỗ trợ",              -- 👈 đổi mô tả phụ
+	Title = "ax10",         -- 👈 đổi thành tên script của bạn
+	SubTitle = "script",              -- 👈 đổi mô tả phụ
 	TabWidth = 157,
 	Size = UDim2.fromOffset(450, 300),
 	Acrylic = true,
@@ -43,64 +43,35 @@ local Window = Fluent:CreateWindow({
 
 -- 📑 Các tab (mục chính)
 local Tabs = {
-	Main1 = Window:AddTab({ Title = "chồng một khu vườn" }),  -- 👈 đổi tên tab 1
-	Main2 = Window:AddTab({ Title = "trái cây" }),  -- 👈 đổi tên tab 2
-	Main3 = Window:AddTab({ Title = "thối nảo" }),     -- 👈 đổi tên tab 3
-	Main4 = Window:AddTab({ Title = "99 đêm" }),        -- 👈 đổi tên tab 4
-	Main5 = Window:AddTab({ Title = "blox fruit" }),    -- 👈 đổi tên tab 5
-	Main6 = Window:AddTab({ Title = "cây vs thối nảo" }) -- 👈 đổi tên tab 6
+	Main1 = Window:AddTab({ Title = "grow a gaden " }),  -- 👈 đổi tên tab 2
+	Main2 = Window:AddTab({ Title = "thối não" }),     -- 👈 đổi tên tab 3
+	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        -- 👈 đổi tên tab 4
+	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    -- 👈 đổi tên tab 5
 }
-
-------------------------------------------------
--- TAB 1: Các kênh tiktok
-------------------------------------------------
-Tabs.Main0:AddButton({
-	Title = "tiktok bạn:)",              -- 👈 tên nút
-	Description = "oách xà lách vô cùng",-- 👈 mô tả nút
-	Callback = function()
-		setclipboard("https://www.tiktok.com/@scriptax10?_r=1&_t=ZS-95ow4NevqxW")  -- 👈 link sao chép
-	end
-})
-
-Tabs.Main0:AddButton({
-	Title = "tik",
-	Description = "làm chơi thui",
-	Callback = function()
-		setclipboard("https://www.tiktok.com/@scriptax10?_r=1&_t=ZS-95ow4NevqxW")     -- 👈 link khác
-	end
-})
-
-Tabs.Main0:AddButton({
-	Title = "tiktok",
-	Description = "fl tiktok để biết thêm nhiều script",
-	Callback = function()
-		setclipboard("https://www.tiktok.com/@b.yt03?_t=ZS-90QsHmSjaiu&_r=1")
-	end
-})
 
 ------------------------------------------------
 -- TAB 2: Ví dụ thêm script
 ------------------------------------------------
-.Main2:AddButton({
+Tabs.Main1:AddButton({
+	Title = "speed hub🌱",                             -- 👈 tên nút hiển thị
+	Description = "script này ngon á đủ chức năng cả😃",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+	end
+})
+
+Tabs.Main4:AddButton({
 	Title = "quantum",                             -- 👈 tên nút hiển thị
-	Description = "đường linh script",-- 👈 mô tả
+	Description = "script này ngon",-- 👈 mô tả
 	Callback = function()
 		local Settings = {
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))() -- 👈 link script tải
-	end
-})
-
-Main2:AddButton({
-	Title = "quantum",                             -- 👈 tên nút hiển thị
-	Description = "đường linh script",-- 👈 mô tả
-	Callback = function()
-		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
-		}
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/anhthwroblox/script/refs/heads/main/script%20sailorpiece_speed%20hub"))() -- 👈 link script tải
 	end
 })
