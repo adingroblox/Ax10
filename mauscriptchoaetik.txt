@@ -157,3 +157,14 @@ Tabs.Main5:AddButton({
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
 	end
 })
+
+Tabs.Main6:AddButton({
+	Title = "ringv5",                             --
+	Description = "script hổ chợ thôi",--
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
+		} loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
+	end
+})
