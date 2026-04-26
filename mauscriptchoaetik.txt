@@ -72,7 +72,7 @@ Tabs.Main4:AddButton({
 	end
 })
 
-Tabs.Main2:AddButton({
+Tabs.Main5:AddButton({
 	Title = "đẫy",                             --
 	Description = "script gây cây cú",--
 	Callback = function()
@@ -84,7 +84,7 @@ Tabs.Main2:AddButton({
 	end
 })
 
-Tabs.Main2:AddButton({
+Tabs.Main5:AddButton({
 	Title = "hitbox",                             --
 	Description = "script này add game",--
 	Callback = function()
@@ -108,15 +108,15 @@ Tabs.Main4:AddButton({
 	end
 })
 
-Tabs.Main2:AddButton({
-	Title = "dhuutai",                             --
+Tabs.Main6:AddButton({
+	Title = "ringv5",                             --
 	Description = "script này ngon",--
 	Callback = function()
 		local Settings = {
 			JoinTeam = "Pirates";   --
 			Translator = true;      --
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepcamvan123-star/DhuutaiScript-OP-HUB/refs/heads/main/Script-Made-by-DhuutaiScript"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
 	end
 })
 
@@ -153,17 +153,5 @@ Tabs.Main5:AddButton({
 			Translator = true;      --
 		}
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
-	end
-})
-
-Tabs.Main6:AddButton({
-	Title = "ringv5",                             --
-	Description = "script hổ chợ thôi",--
-	Callback = function()
-		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
-		}
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
 	end
 })
