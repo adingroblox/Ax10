@@ -125,7 +125,7 @@ Tabs.Main2:AddButton({
 	end
 })
 
-Tabs.Main5:AddButton({
+Tabs.Main4:AddButton({
 	Title = "rezd",                             --
 	Description = "script này siêu ngon",--
 	Callback = function()
@@ -137,7 +137,7 @@ Tabs.Main5:AddButton({
 	end
 })
 
-Tabs.Main5:AddButton({
+Tabs.Main4:AddButton({
 	Title = "gravity",                             --
 	Description = "script này ngon",--
 	Callback = function()
