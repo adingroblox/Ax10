@@ -1,6 +1,6 @@
 repeat task.wait() until game:IsLoaded()
 
--- 🟢 Nút mở menu chính
+--
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -23,14 +23,14 @@ ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
 end)
 
--- 🟣 Giao diện Fluent
+--
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
 
--- 🪟 Cửa sổ chính
+--
 local Window = Fluent:CreateWindow({
 	Title = "ax10",         --
-	SubTitle = "script bảng 0.5.1",              -- 👈 đổi mô tả phụ
+	SubTitle = "script bảng 0.5.1",              -- 👈
 	TabWidth = 157,
 	Size = UDim2.fromOffset(450, 300),
 	Acrylic = true,
@@ -38,14 +38,14 @@ local Window = Fluent:CreateWindow({
 	MinimizeKey = Enum.KeyCode.End
 })
 
--- 📑 Các tab (mục chính)
+--
 local Tabs = {
-	Main1 = Window:AddTab({ Title = "grow a gaden " }),  --
-	Main2 = Window:AddTab({ Title = "thối não" }),     --
+	Main1 = Window:AddTab({ Title = "grow a gaden🌳" }),  --
+	Main2 = Window:AddTab({ Title = "thối não🧠" }),     --
 	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        --
 	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    --
    Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),    --
-   Main6 = Window:AddTab({ Title = "sống sót khỏi thăm Hoa" }),    --
+   Main6 = Window:AddTab({ Title = "sống sót khỏi 🛘🌋" }),    --
 }
 
 Tabs.Main1:AddButton({
