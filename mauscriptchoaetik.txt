@@ -14,7 +14,7 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0, 40, 0, 40)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=81010353399760"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
+ImageButton.Image = "http://www.roblox.com/asset/?id=81010353399760"
 
 UICorner.CornerRadius = UDim.new(1, 10)
 UICorner.Parent = ImageButton
@@ -29,10 +29,10 @@ repeat wait() until game:IsLoaded()
 
 --
 local Window = Fluent:CreateWindow({
-	Title = "ax10",         --
-	SubTitle = "script bảng 0.5.1",              -- 👈
+	Title = "ax10",
+	SubTitle = "script bảng 0.5.1",            
 	TabWidth = 157,
-	Size = UDim2.fromOffset(450, 300),
+	Size = UDim2.fromOffset(500,500),
 	Acrylic = true,
 	Theme = "Dark",                   --
 	MinimizeKey = Enum.KeyCode.End
@@ -40,28 +40,28 @@ local Window = Fluent:CreateWindow({
 
 --
 local Tabs = {
-	Main1 = Window:AddTab({ Title = "grow a gaden🌳" }),  --
-	Main2 = Window:AddTab({ Title = "thối não🧠" }),     --
-	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        --
-	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    --
-   Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),    --
-   Main6 = Window:AddTab({ Title = "sống sót khỏi 🛘🌋" }),    --
+	Main1 = Window:AddTab({ Title = "grow a gaden🌳" }),
+	Main2 = Window:AddTab({ Title = "thối não🧠" }),
+	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),
+	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),
+   Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),
+   Main6 = Window:AddTab({ Title = "sống sót khỏi 🛘🌋" }),
 }
 
 Tabs.Main1:AddButton({
-	Title = "speed hub🌱",                             --
-	Description = "script này ngon á đủ chức năng cả",--
+	Title = "speed hub🌱",       
+	Description = "script này ngon á đủ chức năng cả",
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			JoinTeam = "Pirates";
+			Translator = true;
 		}
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() --
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
 	end
 })
 
 Tabs.Main4:AddButton({
-	Title = "quantum",                             --
+	Title = "quantum",
 	Description = "script này ngon",--
 	Callback = function()
 		local Settings = {
