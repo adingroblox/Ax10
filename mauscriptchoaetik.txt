@@ -155,15 +155,3 @@ Tabs.Main5:AddButton({
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 	end
 })
-
-Tabs.Main3:AddButton({
-	Title = "toasty hud",
-	Description = "script hổ chợ thôi",
-	Callback = function()
-		local Settings = {
-			JoinTeam = "Pirates";
-			Translator = true;
-		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/99-night/refs/heads/main/main-en.lua"))()
-	end
-}
