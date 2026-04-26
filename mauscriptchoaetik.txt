@@ -45,11 +45,9 @@ local Tabs = {
 	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        --
 	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    --
    Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),    --
+   Main6 = Window:AddTab({ Title = "sống sót khỏi thăm Hoa" }),    --
 }
 
-------------------------------------------------
--- TAB 2: Ví dụ thêm script
-------------------------------------------------
 Tabs.Main1:AddButton({
 	Title = "speed hub🌱",                             --
 	Description = "script này ngon á đủ chức năng cả",--
