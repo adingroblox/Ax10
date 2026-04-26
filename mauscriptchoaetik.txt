@@ -1,6 +1,3 @@
--- ✅ MẪU CHUẨN CHO NGƯỜI MỚI | ax10
--- Giữ nguyên giao diện thật, chỉ thêm hướng dẫn 👈 ngay bên cạnh dòng cần sửa
-
 repeat task.wait() until game:IsLoaded()
 
 -- 🟢 Nút mở menu chính
@@ -17,7 +14,7 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0, 40, 0, 40)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=78251083712985"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
+ImageButton.Image = "http://www.roblox.com/asset/?id=81010353399760"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
 
 UICorner.CornerRadius = UDim.new(1, 10)
 UICorner.Parent = ImageButton
@@ -146,5 +143,17 @@ Tabs.Main4:AddButton({
 			Translator = true;      --
 		}
 		 loadstring(game:HttpGet("https: //raw.githubusercontent.com /Dev-GravityHub/BloxFruit/refs /heads/main/Main.lua"))() --
+	end
+})
+
+Tabs.Main5:AddButton({
+	Title = "fly",                             --
+	Description = "script hổ chợ thôi",--
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
+		}
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
 	end
 })
