@@ -1,10 +1,32 @@
-ager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+repeat task.wait() until game:IsLoaded()
+
+-- 🟢 Nút mở menu chính
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=81010353399760"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
+
+UICorner.CornerRadius = UDim.new(1, 10)
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
 end)
 
 -- 🟣 Giao diện Fluent
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
-)
+
 -- 🪟 Cửa sổ chính
 local Window = Fluent:CreateWindow({
 	Title = "ax10",         --
@@ -18,12 +40,11 @@ local Window = Fluent:CreateWindow({
 
 -- 📑 Các tab (mục chính)
 local Tabs = {
-	Main1 = Window:AddTab({ Title = "grow a gaden🌳" }),  --
-	Main2 = Window:AddTab({ Title = "thối não🤯" }),     --
+	Main1 = Window:AddTab({ Title = "grow a gaden " }),  --
+	Main2 = Window:AddTab({ Title = "thối não" }),     --
 	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        --
 	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    --
    Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),    --
-Main6 = Window:AddTab({ Title = "sống sót thãm hoạ🛘" }),    --
 }
 
 ------------------------------------------------
@@ -53,7 +74,7 @@ Tabs.Main4:AddButton({
 	end
 })
 
-Tabs.Main5:AddButton({
+Tabs.Main2:AddButton({
 	Title = "đẫy",                             --
 	Description = "script gây cây cú",--
 	Callback = function()
@@ -65,7 +86,7 @@ Tabs.Main5:AddButton({
 	end
 })
 
-Tabs.Main5:AddButton({
+Tabs.Main2:AddButton({
 	Title = "hitbox",                             --
 	Description = "script này add game",--
 	Callback = function()
@@ -89,7 +110,7 @@ Tabs.Main4:AddButton({
 	end
 })
 
-Tabs.Main5:AddButton({
+Tabs.Main2:AddButton({
 	Title = "dhuutai",                             --
 	Description = "script này ngon",--
 	Callback = function()
@@ -134,17 +155,5 @@ Tabs.Main5:AddButton({
 			Translator = true;      --
 		}
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
-	end
-})
-
-Tabs.Main6:AddButton({
-	Title = "ringv5",                             --
-	Description = "script hổ chợ thôi",--
-	Callback = function()
-		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
-		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
 	end
 })
