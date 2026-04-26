@@ -165,6 +165,7 @@ Tabs.Main6:AddButton({
 		local Settings = {
 			JoinTeam = "Pirates";   --
 			Translator = true;      --
-		} loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
+		}
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
 	end
 })
