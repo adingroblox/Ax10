@@ -1,6 +1,6 @@
 repeat task.wait() until game:IsLoaded()
 
---
+
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -102,68 +102,68 @@ Tabs.Main4:AddButton({
 	Callback = function()
 		local Settings = {
 			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			Translator = true;
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiyeueim/vthangsitink/main/BananaHub.lua"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiyeueim/vthangsitink/main/BananaHub.lua"))()
 	end
 })
 
 Tabs.Main6:AddButton({
-	Title = "ringv5",                             --
-	Description = "script này ngon",--
+	Title = "ringv5",
+	Description = "script này ngon",
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			JoinTeam = "Pirates";
+			Translator = true;
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))()
 	end
 })
 
 Tabs.Main4:AddButton({
-	Title = "rezd",                             --
-	Description = "script này siêu ngon",--
+	Title = "rezd",
+	Description = "script này siêu ngon",
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			JoinTeam = "Pirates";
+			Translator = true;
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/luraobermeyer-jpg/redzhub/refs/heads/main/redzhub.lua.txt"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/luraobermeyer-jpg/redzhub/refs/heads/main/redzhub.lua.txt"))() 
 	end
 })
 
 Tabs.Main4:AddButton({
-	Title = "gravity",                             --
-	Description = "script này ngon",--
+	Title = "gravity",
+	Description = "script này ngon",
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			JoinTeam = "Pirates";
+			Translator = true;
 		}
-		 loadstring(game:HttpGet("https: //raw.githubusercontent.com /Dev-GravityHub/BloxFruit/refs /heads/main/Main.lua"))() --
+		 loadstring(game:HttpGet("https: //raw.githubusercontent.com /Dev-GravityHub/BloxFruit/refs /heads/main/Main.lua"))()
 	end
 })
 
 Tabs.Main5:AddButton({
-	Title = "fly",                             --
-	Description = "script hổ chợ thôi",--
+	Title = "fly",
+	Description = "script hổ chợ thôi",
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			JoinTeam = "Pirates";
+			Translator = true;
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 	end
 })
 
 Tabs.Main3:AddButton({
-	Title = "toasty hud",                             --
-	Description = "script hổ chợ thôi",--
+	Title = "toasty hud",
+	Description = "script hổ chợ thôi",
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   --
-			Translator = true;      --
+			JoinTeam = "Pirates";
+			Translator = true;
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/99-night/refs/heads/main/main-en.lua"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/99-night/refs/heads/main/main-en.lua"))()
 	end
 }
