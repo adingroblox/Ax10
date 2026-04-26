@@ -1,32 +1,10 @@
-repeat task.wait() until game:IsLoaded()
-
--- 🟢 Nút mở menu chính
-local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
-ImageButton.Size = UDim2.new(0, 40, 0, 40)
-ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=78251083712985"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
-
-UICorner.CornerRadius = UDim.new(1, 10)
-UICorner.Parent = ImageButton
-
-ImageButton.MouseButton1Down:Connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+ager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
 end)
 
 -- 🟣 Giao diện Fluent
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
-
+)
 -- 🪟 Cửa sổ chính
 local Window = Fluent:CreateWindow({
 	Title = "ax10",         --
@@ -75,7 +53,7 @@ Tabs.Main4:AddButton({
 	end
 })
 
-Tabs.Main2:AddButton({
+Tabs.Main5:AddButton({
 	Title = "đẫy",                             --
 	Description = "script gây cây cú",--
 	Callback = function()
@@ -87,7 +65,7 @@ Tabs.Main2:AddButton({
 	end
 })
 
-Tabs.Main2:AddButton({
+Tabs.Main5:AddButton({
 	Title = "hitbox",                             --
 	Description = "script này add game",--
 	Callback = function()
@@ -111,7 +89,7 @@ Tabs.Main4:AddButton({
 	end
 })
 
-Tabs.Main2:AddButton({
+Tabs.Main5:AddButton({
 	Title = "dhuutai",                             --
 	Description = "script này ngon",--
 	Callback = function()
@@ -159,15 +137,14 @@ Tabs.Main5:AddButton({
 	end
 })
 
-
 Tabs.Main6:AddButton({
-	Title = "dualringpartsv7",                             --
-	Description = "script này ngon",--
+	Title = "ringv5",                             --
+	Description = "script hổ chợ thôi",--
 	Callback = function()
 		local Settings = {
 			JoinTeam = "Pirates";   --
 			Translator = true;      --
 		}
-		 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Super-dual-ring-parts-V7-36699"))() --
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lukashub-coder/Super-ring-V5/refs/heads/main/By%20lukas!!"))() --
 	end
 })
