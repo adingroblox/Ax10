@@ -40,11 +40,12 @@ local Window = Fluent:CreateWindow({
 
 -- 📑 Các tab (mục chính)
 local Tabs = {
-	Main1 = Window:AddTab({ Title = "grow a gaden " }),  --
-	Main2 = Window:AddTab({ Title = "thối não" }),     --
+	Main1 = Window:AddTab({ Title = "grow a gaden🌳" }),  --
+	Main2 = Window:AddTab({ Title = "thối não🤯" }),     --
 	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        --
 	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    --
    Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),    --
+Main6 = Window:AddTab({ Title = "sống sót thãm hoạ🛘" }),    --
 }
 
 ------------------------------------------------
@@ -155,5 +156,18 @@ Tabs.Main5:AddButton({
 			Translator = true;      --
 		}
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
+	end
+})
+
+
+Tabs.Main6:AddButton({
+	Title = "dualringpartsv7",                             --
+	Description = "script này ngon",--
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
+		}
+		 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Super-dual-ring-parts-V7-36699"))() --
 	end
 })
