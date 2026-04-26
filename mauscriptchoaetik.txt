@@ -30,7 +30,7 @@ repeat wait() until game:IsLoaded()
 -- 🪟 Cửa sổ chính
 local Window = Fluent:CreateWindow({
 	Title = "ax10",         --
-	SubTitle = "script bảng 0.5",              -- 👈 đổi mô tả phụ
+	SubTitle = "script bảng 0.5.1",              -- 👈 đổi mô tả phụ
 	TabWidth = 157,
 	Size = UDim2.fromOffset(450, 300),
 	Acrylic = true,
@@ -155,3 +155,15 @@ Tabs.Main5:AddButton({
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() --
 	end
 })
+
+Tabs.Main3:AddButton({
+	Title = "toasty hud",                             --
+	Description = "script hổ chợ thôi",--
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
+		}
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/99-night/refs/heads/main/main-en.lua"))() --
+	end
+}
