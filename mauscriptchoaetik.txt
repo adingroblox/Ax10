@@ -32,94 +32,119 @@ repeat wait() until game:IsLoaded()
 
 -- 🪟 Cửa sổ chính
 local Window = Fluent:CreateWindow({
-	Title = "ax10",         -- 👈 đổi thành tên script của bạn
-	SubTitle = "script bảng 0.03.5",              -- 👈 đổi mô tả phụ
+	Title = "ax10",         --
+	SubTitle = "script bảng 0.5",              -- 👈 đổi mô tả phụ
 	TabWidth = 157,
 	Size = UDim2.fromOffset(450, 300),
 	Acrylic = true,
-	Theme = "Dark",                   -- 👈 đổi màu chủ đạo: Amethyst, Dark, Aqua, Light,...
+	Theme = "Dark",                   --
 	MinimizeKey = Enum.KeyCode.End
 })
 
 -- 📑 Các tab (mục chính)
 local Tabs = {
-	Main1 = Window:AddTab({ Title = "grow a gaden " }),  -- 👈 đổi tên tab 2
-	Main2 = Window:AddTab({ Title = "thối não" }),     -- 👈 đổi tên tab 3
-	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        -- 👈 đổi tên tab 4
-	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    -- 👈 đổi tên tab 5
+	Main1 = Window:AddTab({ Title = "grow a gaden " }),  --
+	Main2 = Window:AddTab({ Title = "thối não" }),     --
+	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        --
+	Main4 = Window:AddTab({ Title = "blox fruit🍎" }),    --
+   Main5 = Window:AddTab({ Title = "chức năng có sẵng" }),    --
 }
 
 ------------------------------------------------
 -- TAB 2: Ví dụ thêm script
 ------------------------------------------------
 Tabs.Main1:AddButton({
-	Title = "speed hub🌱",                             -- 👈 tên nút hiển thị
-	Description = "script này ngon á đủ chức năng cả",-- 👈 mô tả
+	Title = "speed hub🌱",                             --
+	Description = "script này ngon á đủ chức năng cả",--
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
 		}
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() --
 	end
 })
 
 Tabs.Main4:AddButton({
-	Title = "quantum",                             -- 👈 tên nút hiển thị
-	Description = "script này ngon",-- 👈 mô tả
+	Title = "quantum",                             --
+	Description = "script này ngon",--
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
 		}
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))() --
 	end
 })
 
 Tabs.Main2:AddButton({
-	Title = "đẫy",                             -- 👈 tên nút hiển thị
-	Description = "script gây cây cú",-- 👈 mô tả
+	Title = "đẫy",                             --
+	Description = "script gây cây cú",--
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/long191910/all-my-roblox-script/refs/heads/main/touchfling.lua"))() -- 👈 link script tải
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/long191910/all-my-roblox-script/refs/heads/main/touchfling.lua"))() --
 	end
 })
 
 Tabs.Main2:AddButton({
-	Title = "hitbox",                             -- 👈 tên nút hiển thị
-	Description = "script này add game",-- 👈 mô tả
+	Title = "hitbox",                             --
+	Description = "script này add game",--
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
 		}
-		 loadstring(game:HttpGet("https://pastefy.app/ItfO0tdg/raw"))() -- 👈 link script tải
+		 loadstring(game:HttpGet("https://pastefy.app/ItfO0tdg/raw"))() --
 	end
 })
 
 Tabs.Main4:AddButton({
-	Title = "banana cat",                             -- 👈 tên nút hiển thị
-	Description = "script này siêu ngon",-- 👈 mô tả
+	Title = "banana cat",                             --
+	Description = "script này siêu ngon",--
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiyeueim/vthangsitink/main/BananaHub.lua"))() -- 👈 link script tải
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiyeueim/vthangsitink/main/BananaHub.lua"))() --
 	end
 })
 
 Tabs.Main2:AddButton({
-	Title = "dhuutai",                             -- 👈 tên nút hiển thị
-	Description = "script này ngon",-- 👈 mô tả
+	Title = "dhuutai",                             --
+	Description = "script này ngon",--
 	Callback = function()
 		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
 		}
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepcamvan123-star/DhuutaiScript-OP-HUB/refs/heads/main/Script-Made-by-DhuutaiScript"))() -- 👈 link script tải
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepcamvan123-star/DhuutaiScript-OP-HUB/refs/heads/main/Script-Made-by-DhuutaiScript"))() --
+	end
+})
+
+Tabs.Main5:AddButton({
+	Title = "rezd",                             --
+	Description = "script này siêu ngon",--
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
+		}
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/luraobermeyer-jpg/redzhub/refs/heads/main/redzhub.lua.txt"))() --
+	end
+})
+
+Tabs.Main5:AddButton({
+	Title = "gravity",                             --
+	Description = "script này ngon",--
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   --
+			Translator = true;      --
+		}
+		 loadstring(game:HttpGet("https: //raw.githubusercontent.com /Dev-GravityHub/BloxFruit/refs /heads/main/Main.lua"))() --
 	end
 })
