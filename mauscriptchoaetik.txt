@@ -34,7 +34,7 @@ local Window = Fluent:CreateWindow({
 	TabWidth = 157,
 	Size = UDim2.fromOffset(400,250),
 	Acrylic = true,
-	Theme = "Dark",                   --
+	Theme = "Dark & red",                   --
 	MinimizeKey = Enum.KeyCode.End
 })
 
