@@ -1,0 +1,200 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- MADE BY CHATGPT 
+-- Criar GUI persistente para aumentar hitbox de NPCs
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+-- Criar o ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "HitboxGUI"
+screenGui.ResetOnSpawn = false -- Persiste mesmo após respawn
+screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Criar o Frame principal
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 250, 0, 240)
+mainFrame.Position = UDim2.new(0.5, -125, 0.5, -120)
+mainFrame.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+mainFrame.Active = true
+mainFrame.Draggable = true -- Torna o GUI móvel
+mainFrame.Parent = screenGui
+
+-- Botão para minimizar o GUI
+local minimizeButton = Instance.new("TextButton")
+minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+minimizeButton.Position = UDim2.new(1, -35, 0, 5)
+minimizeButton.Text = "-"
+minimizeButton.BackgroundColor3 = Color3.new(0.5, 0.1, 0.1)
+minimizeButton.TextColor3 = Color3.new(1, 1, 1)
+minimizeButton.Parent = mainFrame
+
+-- Label do título
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, -40, 0, 30)
+titleLabel.Position = UDim2.new(0, 5, 0, 5)
+titleLabel.Text = "NPC HITBOX"
+titleLabel.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 16
+titleLabel.Parent = mainFrame
+
+-- Frame interno (conteúdo do GUI)
+local contentFrame = Instance.new("Frame")
+contentFrame.Size = UDim2.new(1, -10, 1, -40)
+contentFrame.Position = UDim2.new(0, 5, 0, 35)
+contentFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+contentFrame.Parent = mainFrame
+
+-- Criar o botão de ativar/desativar
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(1, -20, 0, 30)
+button.Position = UDim2.new(0, 10, 0, 10)
+button.Text = "Aumentar Hitbox de NPCs"
+button.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+button.TextColor3 = Color3.new(1, 1, 1)
+button.Parent = contentFrame
+
+-- Label de status
+local statusLabel = Instance.new("TextLabel")
+statusLabel.Size = UDim2.new(1, -20, 0, 30)
+statusLabel.Position = UDim2.new(0, 10, 0, 50)
+statusLabel.Text = "Status: Desativado"
+statusLabel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+statusLabel.TextColor3 = Color3.new(1, 1, 1)
+statusLabel.Parent = contentFrame
+
+-- Input para tamanho da hitbox
+local sizeInput = Instance.new("TextBox")
+sizeInput.Size = UDim2.new(1, -20, 0, 30)
+sizeInput.Position = UDim2.new(0, 10, 0, 90)
+sizeInput.Text = "Tamanho: 5"
+sizeInput.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+sizeInput.TextColor3 = Color3.new(1, 1, 1)
+sizeInput.Parent = contentFrame
+
+-- Checkbox para apenas cabeça
+local headOnlyCheckbox = Instance.new("TextButton")
+headOnlyCheckbox.Size = UDim2.new(1, -20, 0, 30)
+headOnlyCheckbox.Position = UDim2.new(0, 10, 0, 130)
+headOnlyCheckbox.Text = "Apenas Cabeça: Não"
+headOnlyCheckbox.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+headOnlyCheckbox.TextColor3 = Color3.new(1, 1, 1)
+headOnlyCheckbox.Parent = contentFrame
+
+-- Checkbox para colisão
+local noCollisionCheckbox = Instance.new("TextButton")
+noCollisionCheckbox.Size = UDim2.new(1, -20, 0, 30)
+noCollisionCheckbox.Position = UDim2.new(0, 10, 0, 170)
+noCollisionCheckbox.Text = "Sem Colisão: Não"
+noCollisionCheckbox.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+noCollisionCheckbox.TextColor3 = Color3.new(1, 1, 1)
+noCollisionCheckbox.Parent = contentFrame
+
+-- Variáveis de controle
+local isActive = false
+local headOnly = false
+local noCollision = false
+local defaultSize = Vector3.new(5, 5, 5)
+local npcOriginalSizes = {}
+
+-- Função para verificar se um objeto é um NPC
+local function isNPC(character)
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid and not Players:GetPlayerFromCharacter(character) then
+        return true
+    end
+    return false
+end
+
+-- Função para ajustar a hitbox de NPCs
+local function adjustNPCsHitbox()
+    local size = tonumber(sizeInput.Text:match("%d+")) or 5
+    local newSize = Vector3.new(size, size, size)
+
+    for _, object in ipairs(workspace:GetDescendants()) do
+        if object:IsA("BasePart") and object.Parent and isNPC(object.Parent) then
+            if not npcOriginalSizes[object] then
+                npcOriginalSizes[object] = object.Size
+            end
+
+            if headOnly then
+                if object.Name:lower() == "head" then
+                    object.Size = npcOriginalSizes[object] + newSize
+                    object.CanCollide = not noCollision
+                    object.Transparency = 0.5 -- Torna a hitbox visível para debug
+                else
+                    object.Size = npcOriginalSizes[object] -- Reseta o tamanho de outras partes
+                    object.CanCollide = true
+                    object.Transparency = 0
+                end
+            else
+                if object.Name:lower() == "head" then
+                    object.Size = npcOriginalSizes[object] -- Reseta o tamanho da cabeça
+                    object.CanCollide = true
+                    object.Transparency = 0
+                else
+                    object.Size = npcOriginalSizes[object] + newSize
+                    object.CanCollide = not noCollision
+                    object.Transparency = 0.5 -- Torna a hitbox visível para debug
+                end
+            end
+        end
+    end
+end
+
+-- Controle do botão principal
+button.MouseButton1Click:Connect(function()
+    isActive = not isActive
+    if isActive then
+        statusLabel.Text = "Status: Ativado"
+    else
+        statusLabel.Text = "Status: Desativado"
+        -- Reseta tamanhos originais ao desativar
+        for object, originalSize in pairs(npcOriginalSizes) do
+            if object:IsA("BasePart") then
+                object.Size = originalSize
+                object.Transparency = 0
+                object.CanCollide = true
+            end
+        end
+        npcOriginalSizes = {}
+    end
+end)
+
+-- Controle do checkbox "Apenas Cabeça"
+headOnlyCheckbox.MouseButton1Click:Connect(function()
+    headOnly = not headOnly
+    headOnlyCheckbox.Text = headOnly and "Apenas Cabeça: Sim" or "Apenas Cabeça: Não"
+end)
+
+-- Controle do checkbox "Sem Colisão"
+noCollisionCheckbox.MouseButton1Click:Connect(function()
+    noCollision = not noCollision
+    noCollisionCheckbox.Text = noCollision and "Sem Colisão: Sim" or "Sem Colisão: Não"
+end)
+
+-- Controle do botão de minimizar
+local isMinimized = false
+minimizeButton.MouseButton1Click:Connect(function()
+    isMinimized = not isMinimized
+    if isMinimized then
+        contentFrame.Visible = false
+        mainFrame.Size = UDim2.new(0, 250, 0, 40)
+    else
+        contentFrame.Visible = true
+        mainFrame.Size = UDim2.new(0, 250, 0, 240)
+    end
+    minimizeButton.Text = isMinimized and "+" or "-"
+end)
+
+-- Loop para monitorar NPCs
+RunService.Heartbeat:Connect(function()
+    if isActive then
+        adjustNPCsHitbox()
+    end
+end)
